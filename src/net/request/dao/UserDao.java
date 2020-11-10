@@ -24,8 +24,9 @@ public class UserDao {
             preparedStatement.setString(2, user.getEmail());
             preparedStatement.setString(3, user.getCompanyName());
             preparedStatement.setString(4, user.getDescription());
-            preparedStatement.setString(5, user.getFile());
-
+            if (user.getFile() != null) {
+            	preparedStatement.setBlob(5, user.getFile());
+            }
             System.out.println(preparedStatement);
             // Step 3: Execute the query or update query
             result = preparedStatement.executeUpdate();

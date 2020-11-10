@@ -1,15 +1,17 @@
 package net.request.model;
 
+import java.io.*;
+
 public class User {
 	private String userName;
     private String email;
     private String companyName;
     private String Description;
-    private String file;
-	public String getFile() {
+    private InputStream file;
+	public InputStream getFile() {
 		return file;
 	}
-	public void setFile(String file) {
+	public void setFile(InputStream file) {
 		this.file = file;
 	}
 	public String getUserName() {
