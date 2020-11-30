@@ -5,13 +5,23 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Request</title>
+<style>
+body {background-color: white;background-repeat: no-repeat;background-position: center;}
+h1   {color: blue;}
+p    {color: red;}
+tr   {color:red}
+h1	{margin: 100px}
+form   { margin: 200px;}
+
+</style>
 </head>
 <body>
 	<div align="center">
-		<h1>User request</h1>
-		<form action="<%= request.getContextPath() %>/register" method="post"
+		<h1>Windsor Data Portal</h1>
+		<form action="<%= request.getContextPath() %>/request" method="post"
 			enctype="multipart/form-data">
-			<table style="with: 80%">
+			<h2>User request</h2>
+			<table style="with: 80%" >
 				<tr>
 					<td>Name</td>
 					<td><input type="text" name="username" required /></td>
