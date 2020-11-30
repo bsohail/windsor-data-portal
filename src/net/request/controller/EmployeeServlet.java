@@ -26,24 +26,25 @@ public class EmployeeServlet extends HttpServlet {
     	    }
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-
+    	//getting parameters from the JSP file
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-
+        //setting the fields in the Employee class after getting the input
         Employee employee = new Employee();
         employee.setFirstName(firstName);
         employee.setLastName(lastName);
         employee.setUsername(username);
         employee.setPassword(password);
         try {
+        	//registering the employee
             employeeDao.registerEmployee(employee);
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
+        //After employee registers, it goes to the login page
         response.sendRedirect("login.jsp");
     }
 }

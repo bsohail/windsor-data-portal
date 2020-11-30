@@ -5,15 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Request</title>
-<style>
-body {background-color: white;background-repeat: no-repeat;background-position: center;}
-h1   {color: blue;}
-p    {color: red;}
-tr   {color:red}
-h1	{margin: 100px}
-form   { margin: 200px;}
-
-</style>
+<link rel="stylesheet" href="login.css" type="text/css">
 </head>
 <body>
 	<div align="center">
@@ -40,10 +32,16 @@ form   { margin: 200px;}
 				</tr>
 				<tr>
 					<td>File</td>
-					<td><input type="file" name="data" required /></td>
+					<td>
+					<br>
+					<label for="file-upload" class="custom-file-upload">
+    					Custom Upload
+					</label>
+					<input id="file-upload" type="file" name="data"/></td> 
 				</tr>
 			</table>
-			<input type="submit" value="Submit" />
+			<br>
+			<button type="submit" value="Submit" >Submit</button>
 		</form>
 	</div>
 </body>

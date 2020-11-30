@@ -19,20 +19,24 @@ public class Login extends HttpServlet {
  
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+    	//getting parameters from the JSP file
         String email = request.getParameter("email");
         String password = request.getParameter("password");
          
         UserLoginDao userLoginDao = new UserLoginDao();
          
         try {
+        	//checking if the credentials are correct
             Employee user = userLoginDao.checkLogin(email, password);
             String destPage = "login.jsp";
              
             if (user != null) {
+            	//if the user is logged in, creating a session
                 HttpSession session = request.getSession();
                 session.setAttribute("user", user);
                 destPage = "regSuccess.jsp";
             } else {
+            	//incorrect credentials
                 String message = "Invalid email/password";
                 request.setAttribute("message", message);
             }
