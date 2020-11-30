@@ -1,13 +1,14 @@
 package net.request.model;
 
 import java.io.Serializable;
-
+//class to save the employee details when registering
 public class Employee implements Serializable {
     private static final long serialVersionUID = 1L;
     private String firstName;
     private String lastName;
     private String username;
     private String password;
+  //getters and setters
     public String getFirstName() {
         return firstName;
     }

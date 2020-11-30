@@ -1,13 +1,14 @@
 package net.request.model;
 
 import java.io.*;
-
+//Class to save user's request details
 public class User {
 	private String userName;
     private String email;
     private String companyName;
     private String Description;
     private InputStream file;
+    //getters and setters
 	public InputStream getFile() {
 		return file;
 	}

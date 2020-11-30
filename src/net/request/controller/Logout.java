@@ -18,8 +18,9 @@ public class Logout extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession(false);
         if (session != null) {
+        	//deleting the session/logging out 
             session.removeAttribute("user");
-             
+            //redirects to the login page
             RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
             dispatcher.forward(request, response);
         }

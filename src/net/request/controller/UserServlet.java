@@ -31,7 +31,7 @@ public class UserServlet extends HttpServlet {
 		dispatcher.forward(request, response);	
     	    }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    	//getting parameters from the JSP file
         String userName = request.getParameter("username");
         String email = request.getParameter("email");
         String companyName = request.getParameter("companyname");
